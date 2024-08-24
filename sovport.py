@@ -9,6 +9,8 @@ from rich.panel import Panel
 from rich.prompt import Prompt
 from rich.progress import Progress
 from scapy.all import ICMP, IP, sr1
+import os
+import platform
 
 console = Console()
 
@@ -85,6 +87,11 @@ def save_results(filename, data):
         console.print(f"[bold red]Error saving file:[/bold red] {e}", style="bold red")
 
 def main():
+    if platform.system() == 'Windows':
+        os.system('cls')
+    else:
+        os.system('clear')
+    
     print_banner()
 
     host = Prompt.ask("Enter IP/Domain", default="example.com")
@@ -121,7 +128,7 @@ def main():
 
     elif scan_type == "aggressive":
         try:
-            scan_ports(host, range(1, 65536), nm)  # Scan all ports from 1 to 65535
+            scan_ports(host, range(1, 65536), nm)
             detect_os(host, nm)
             save_results("detailed_scan_results.json", nm.csv())
         except Exception as e:
