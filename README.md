@@ -1,21 +1,21 @@
 # SOVPORT
 
-SOVPORT is a network scanning tool designed to perform various types of scans on IP addresses and networks. It includes functionalities such as port scanning, subnet scanning, and OS detection, and it presents results in a user-friendly format using the `rich` library for terminal graphics.
+SOVPORT is a network scanning tool designed to perform various types of network scans. It includes functionalities such as port scanning, subnet scanning, and OS detection, all presented in a user-friendly terminal interface using the `rich` library.
 
 ## Features
 
-- **Port Scanning:** Scan specific ports or a range of ports.
+- **Port Scanning:** Scan specific ports or a range of ports on a given host.
 - **Subnet Scanning:** Perform a ping sweep to identify live hosts in a subnet.
-- **OS Detection:** Basic OS detection using Nmap.
-- **Interactive UI:** User-friendly terminal interface using `rich` and `dialog`.
+- **OS Detection:** Basic OS detection capabilities using Nmap.
+- **Interactive Terminal Interface:** User-friendly UI with `rich` and `dialog` for a better experience.
 
 ## Requirements
 
 Before running the script, you need to install the following dependencies:
 
 - `scapy` for network packet manipulation.
-- `rich` for terminal graphics.
-- `python-nmap` for interfacing with Nmap.
+- `rich` for enhanced terminal output.
+- `python-nmap` for Nmap integration.
 
 ## Installation
 
