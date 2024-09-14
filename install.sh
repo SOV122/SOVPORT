@@ -17,7 +17,7 @@ install_python_packages() {
 install_system_packages() {
     echo "Installing system packages..."
     sudo apt-get update
-    sudo apt-get install -y dialog python3-pip
+    sudo apt-get install -y dialog python3-pip python3-tk
 }
 
 check_root() {
