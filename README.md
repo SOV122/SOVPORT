@@ -1,28 +1,30 @@
 # SOVPORT
 
-SOVPORT is a network scanning tool designed to perform various types of network scans. It includes functionalities such as port scanning, subnet scanning, and OS detection, all presented in a user-friendly terminal interface using the `rich` library.
+SOVPORT is a network scanning tool available in two versions:
+
+- **`sovport.py`**: A terminal-based tool for command-line users.
+- **`sovport_gui.py`**: A graphical user interface (GUI) tool using Tkinter for a more user-friendly experience.
 
 ## Features
 
-- **Port Scanning:** Scan specific ports or a range of ports on a given host.
-- **Subnet Scanning:** Perform a ping sweep to identify live hosts in a subnet.
-- **OS Detection:** Basic OS detection capabilities using Nmap.
-- **Interactive Terminal Interface:** User-friendly UI with `rich` and `dialog` for a better experience.
-
-## Requirements
-
-Before running the script, you need to install the following dependencies:
-
-- `scapy` for network packet manipulation.
-- `rich` for enhanced terminal output.
-- `python-nmap` for Nmap integration.
+- **Port Scanning**: Scan individual ports, a range of ports, or perform a full port scan.
+- **Network Discovery**: Ping sweep to find live hosts in a subnet.
+- **OS Detection**: Detect the operating system of a host.
+- **Results Saving**: Save scan results in JSON format.
 
 ## Installation
 
-To install the necessary dependencies, use the provided `install.sh` script:
+Follow these steps to install and set up SOVPORT:
 
-1. Clone the repository:
+### Prerequisites
 
+Ensure you have Python 3 installed on your system. Tkinter is included with Python by default but can be installed separately if needed.
+
+### Step-by-Step Installation
+
+1. **Clone the Repository**
+
+   Clone the SOVPORT repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/your-repository.git
-   cd your-repository
+   git clone https://github.com/yourusername/sovport.git
+   cd sovport
